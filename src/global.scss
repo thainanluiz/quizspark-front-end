@@ -16,7 +16,7 @@
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
@@ -24,3 +24,29 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: rgb(0, 102, 93);
+  background: linear-gradient(
+    225deg,
+    rgba(0, 102, 93, 1) 0%,
+    rgba(60, 0, 105, 1) 100%
+  );
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 102, 93);
+  background: linear-gradient(
+    225deg,
+    rgba(0, 102, 93, 1) 0%,
+    rgba(60, 0, 105, 1) 100%
+  );
+}
