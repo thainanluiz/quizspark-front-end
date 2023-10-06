@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <!-- Formulário de login, a classe está definida no arquivo de estilos globais "global.scss" -->
+  <div class="container-center">
+    <div class="login-wrapper">
+      <span class="login-title">Login</span>
+      <!-- O formulário é criado com a diretiva "formGroup" e o método "login()" é chamado no evento "ngSubmit" -->
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="floating">Matrícula</ion-label>
+          <ion-input
+            type="tel"
+            formControlName="matricula"
+            maxlength="12"
+            minlength="12"
+          ></ion-input>
+        </ion-item>
+        <ion-item class="bottom">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input
+            type="password"
+            formControlName="senha"
+            maxlength=""
+          ></ion-input>
+        </ion-item>
+        <!-- O botão de login só é habilitado quando o formulário estiver válido -->
+        <ion-button type="submit" [disabled]="!form.valid" expand="block">
+          Entrar
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>
